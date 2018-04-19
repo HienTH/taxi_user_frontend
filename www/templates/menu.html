@@ -1,0 +1,57 @@
+<ion-side-menus enable-menu-with-back-views="false">
+    <ion-side-menu-content>
+        <ion-nav-bar class="bar-stable">
+            <ion-nav-back-button> </ion-nav-back-button>
+            <ion-nav-buttons side="left">
+                <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+            </ion-nav-buttons>	    
+        </ion-nav-bar>
+        <ion-nav-view name="menuContent" animation="slide-left-right"></ion-nav-view>
+    </ion-side-menu-content>
+
+
+    <ion-side-menu side="left">
+        <ion-header-bar class="bar-stable">
+             <h1 class="title">noibaiconnect.com.vn</h1>
+        </ion-header-bar>
+        <ion-content>
+            <ion-list>
+		        <ion-item id="menu_account" menu-close href="#/tab/account">
+                    <span class="left">Tài khoản:</span> <info id="menu_user_info" class="right">{{userData.username}}</info>
+                    <div class="clear"></div>
+                </ion-item>
+                <ion-item menu-close href="#/tab/map">
+                    Đặt chuyến
+                </ion-item>
+                <ion-item menu-close href="#/tab/tableprice">
+                    Bảng giá
+                </ion-item>
+	            <ion-item menu-close href="#/tab/info">
+                    Giới thiệu
+                </ion-item>
+		        <ion-item id="menu_hist" menu-close href="#/tab/bookhistory">
+		            Lịch sử đặt chuyến
+                </ion-item>
+		        <ion-item id="menu_promo" menu-close  href="#/tab/noti">
+		            Thông báo khuyến mãi <b style="color: red;">[<span id="menu_promo_count">{{promotions_total}}</span>]</b>
+                </ion-item>
+                <ion-item id="menu_logout" menu-close href="#/tab/logout">
+                    Thoát
+                </ion-item>
+                <ion-item menu-close class="hidden hide ng-hide" href="{{link}}">
+                    {{log}}
+                </ion-item>
+                <ion-item id="menu_login" menu-close href="#/tab/login">
+                    Đăng nhập
+                </ion-item>
+                <ion-item id="menu_reg" menu-close href="#/tab/register">
+                    Đăng ký
+                </ion-item>
+
+            </ion-list>
+	    </br>
+	    <center><b>Liên hệ: <a href="tel:+842466661669">024.6666.1669</a></b></center></br>
+	    <center>(c) noibaiconnect.com.vn</center>
+        </ion-content>
+    </ion-side-menu>
+</ion-side-menus>
